@@ -9,6 +9,7 @@ import { Response } from '@angular/http';
 })
 export class TopthreeComponent implements OnInit {
 
+  //this is the constructor of the TopthreeComponent class
   constructor(private serverService: ServerService) { 
     //This method  call will call the serverService.getTopThree() and get the top three when page loads
     this.onGetTopThree();
