@@ -4,13 +4,6 @@ const app = express();
 const morgan = require('morgan');
 //import for body parsing 
 const bodyParser = require('body-parser');
-//for auto reloading of the browser
-app.use(morgan('dev'));
-//for body parsing 
-app.use(bodyParser.urlencoded({
-    extended:false
-}));
-app.use(bodyParser.json());
 
 //===================== Adding access controll headers =====================
 app.use(function (req, res, next) {
@@ -33,6 +26,14 @@ app.use(function (req, res, next) {
 });
 //============================================================================
 
+//for auto reloading of the browser
+app.use(morgan('dev'));
+//for body parsing 
+app.use(bodyParser.urlencoded({
+    extended:false
+}));
+app.use(bodyParser.json());
+
 //============================= HANDLING ROUTES ==============================
 
 //imporing the routes
@@ -52,7 +53,7 @@ app.use((req, res, next) => {
     const error = new Error('Not found');
     error.status = 404;
     next(error);
-})
+});
 
 app.use((error, req, res, next) => {
     res.status(error.status || 500);
