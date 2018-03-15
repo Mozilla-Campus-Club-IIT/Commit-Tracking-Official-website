@@ -26,6 +26,11 @@ router.get('/', (req, res, next) => {
                     username: "techStars101",
                     numcommits: 50,
                     profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
+                },
+                {
+                    username: "Chathu",
+                    numcommits: 50,
+                    profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
                 }
             ]
     });

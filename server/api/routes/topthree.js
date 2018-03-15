@@ -11,7 +11,7 @@ var topthree =
     },
     second: {
         name: "john98",
-        numcommits: 200,
+        numcommits: 120,
         profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
     },
     third: {
@@ -21,7 +21,17 @@ var topthree =
     }
 }
 
- function onGetRequestToGitHubApi() {
+router.get('/', (req, res, next) => {
+    res.status(200).json({
+        message: "Handling GET request for /Top 3",
+        topthree: topthree
+    }); 
+    console.log(response);
+});
+
+//===================================================
+
+function onGetRequestToGitHubApi() {
     axios.get('https://api.github.com/repos/Mozilla-Campus-Club-IIT/Mozilla-Campus-Club-IIT.github.io/stats/contributors')
     .then(response => {     
        // console.log(response.data[1].author.login);
@@ -31,19 +41,6 @@ var topthree =
         console.log(error);
     });
 }
-
-var data= onGetRequestToGitHubApi();
-setTimeout(()=>{console.log(data)},5000);
-
-router.get('/', (req, res, next) => {
-
-    res.status(200).json({
-        message: "Handling GET request for /Top 3",
-        topthree: data
-    }); 
-    console.log(response);
-});
-
     
 
 module.exports = router;
