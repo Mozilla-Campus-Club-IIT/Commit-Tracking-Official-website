@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-//const axios = require('axios');
+const axios = require('axios');
 
 var topthree =
 {
@@ -32,16 +32,24 @@ router.get('/', (req, res, next) => {
 
 //===================================================
 
-// function onGetRequestToGitHubApi() {
-//     axios.get('https://api.github.com/repos/Mozilla-Campus-Club-IIT/Mozilla-Campus-Club-IIT.github.io/stats/contributors')
-//     .then(response => {     
-//        // console.log(response.data[1].author.login);
-//         return response.data[1].author.login;
-//     })
-//     .catch(error => {
-//         console.log(error);
-//     });
-// }
+function onGetRequestToGitHubApi() {
+    axios.get('https://api.github.com/repos/Mozilla-Campus-Club-IIT/Mozilla-Campus-Club-IIT.github.io/stats/contributors')
+    .then(response => {  
+       
+        console.log("Username :"+response.data[5].author.login);
+        console.log("PP Url :"+response.data[5].author.avatar_url);
+        console.log("Commits :"+response.data[5].total);
+
+    })
+    .catch(error => {
+        console.log(error);
+    });
+}
+
+
+
+var res=onGetRequestToGitHubApi();
+console.log(res);
     
 
 module.exports = router;
