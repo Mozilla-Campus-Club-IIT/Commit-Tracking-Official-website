@@ -5,18 +5,19 @@ const axios = require('axios');
 var topthree =
 {
     first: {
-        name: "wdevon99",
-        numcommits: 300,
-        profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
+        name: "Ravindu",
+        numcommits: 21,
+        profilepicurl: "https://avatars1.githubusercontent.com/u/17488349?v=4"
+        
     },
     second: {
-        name: "john98",
-        numcommits: 120,
-        profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
+        name: "obhasha",
+        numcommits: 13,
+        profilepicurl: "https://avatars3.githubusercontent.com/u/15901703?v=4"
     },
     third: {
-        name: "xTechBro",
-        numcommits: 100,
+        name: "wdevon99",
+        numcommits: 8,
         profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
     }
 }
@@ -32,24 +33,35 @@ router.get('/', (req, res, next) => {
 
 //===================================================
 
-function onGetRequestToGitHubApi() {
-    axios.get('https://api.github.com/repos/Mozilla-Campus-Club-IIT/Mozilla-Campus-Club-IIT.github.io/stats/contributors')
+async function onGetRequestToGitHubApi() { 
+
+    let promise=await axios.get('https://api.github.com/repos/Mozilla-Campus-Club-IIT/Mozilla-Campus-Club-IIT.github.io/stats/contributors')
     .then(response => {  
        
         console.log("Username :"+response.data[5].author.login);
         console.log("PP Url :"+response.data[5].author.avatar_url);
         console.log("Commits :"+response.data[5].total);
 
+        return response.data[5].total;
+
     })
     .catch(error => {
         console.log(error);
     });
+ 
+}
+
+async function getUser() {
+    try {
+      const response = await axios.get('/user?ID=12345');
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
 }
 
 
-
 var res=onGetRequestToGitHubApi();
-console.log(res);
-    
+
 
 module.exports = router;

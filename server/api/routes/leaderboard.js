@@ -8,29 +8,29 @@ router.get('/', (req, res, next) => {
         leaderboard:
             [
                 {
+                    username: "Ravindu",
+                    numcommits: 21,
+                    profilepicurl: "https://avatars1.githubusercontent.com/u/17488349?v=4"
+                },
+                {
+                    username: "obhasha",
+                    numcommits: 13,
+                    profilepicurl: "https://avatars3.githubusercontent.com/u/15901703?v=4"
+                },
+                {
                     username: "wdevon99",
-                    numcommits: 300,
+                    numcommits: 8,
                     profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
                 },
                 {
-                    username: "john98",
-                    numcommits: 200,
-                    profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
+                    username: "KushelR",
+                    numcommits: 7,
+                    profilepicurl: "https://avatars1.githubusercontent.com/u/31211834?v=4"
                 },
                 {
-                    username: "xTechBro",
-                    numcommits: 100,
-                    profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
-                },
-                {
-                    username: "techStars101",
-                    numcommits: 50,
-                    profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
-                },
-                {
-                    username: "Chathu",
-                    numcommits: 50,
-                    profilepicurl: "https://avatars2.githubusercontent.com/u/28486947?v=4"
+                    username: "Himanshu-Mishr",
+                    numcommits: 3,
+                    profilepicurl: "https://avatars1.githubusercontent.com/u/1938285?v=4"
                 }
             ]
     });
