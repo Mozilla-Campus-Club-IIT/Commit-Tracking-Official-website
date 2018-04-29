@@ -12,6 +12,6 @@ Rules and Regulations
 * Once you make a change for the repository one of our community leaders will check and approve your contribution.
 * Make sure to keep a meaningful commit message when you contribute to this repository.
 
-Let's make it happen...
-Happy Coding....
+Let's make it happen!
+Happy Coding
 
