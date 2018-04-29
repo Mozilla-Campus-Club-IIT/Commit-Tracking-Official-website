@@ -15,6 +15,9 @@ export class TopthreeComponent implements OnInit {
     this.onGetTopThree();
   }
 
+//repoName holds the name of the contributed repo
+repoName="-"
+
 //================This JS Object will save top contributors data =====================
 topthree = 
 {
@@ -51,6 +54,8 @@ onGetTopThree(){
 
 //This method will set the values to the top three contributors JSON object data to data recived from get request
 updateUiForTopThree(data :any){
+  //reporname
+  this.repoName=data.repoName;
   //1ST PLACE PERSON
   this.topthree.first.name = data.topthree.first.name;
   this.topthree.first.numcommits=data.topthree.first.numcommits;

@@ -1,8 +1,13 @@
 .mainHeading{
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     text-align: center;
     font-weight: 300;
+}
+.repoHeading{
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 30px;
 }
 
 .winnerContainer{
