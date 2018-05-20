@@ -1,0 +1,43 @@
+.mainHeading{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 300;
+}
+.repoHeading{
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+
+.winnerContainer{
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom:30px; 
+    
+}
+.imgPosition{
+    border: none;
+    background-color:transparent;
+    width: 30%;
+    margin-top:-50px;
+    margin-bottom: 30px; 
+}
+
+.imgProfilePic{
+    border-radius: 0%;
+    border: none;
+    background-color:transparent;
+    width: 50%;
+}
+
+h3{
+    color: rgb(71, 71, 71);
+    font-weight: 400;
+}
+.winnerName{
+    font-size: 30px;
+    font-weight: 700;
+}

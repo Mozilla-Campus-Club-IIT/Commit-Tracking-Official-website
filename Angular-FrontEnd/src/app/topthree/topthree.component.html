@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-xs-12">
+      <!-- ============== TESTING ==============
+      <br> <br>  
+      <button class="btn btn-success" (click) = "onGetTopThree()"> GET TOP THREE </button>
+      <br> <br> 
+      ============= TESTING ============== -->
+      <h1 class="mainHeading"> 
+        Top 3 Contributors
+      </h1>
+      <h3 class="repoHeading" > <b>Repo : </b > {{repoName}}</h3>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+            <div class="winnerContainer">
+              <img class="imgPosition" src="./assets/img/firstPlace.png" >
+              <br>
+              <img class="imgProfilePic" src="{{topthree.first.profilepicurl}}" alt="ProfilePic" >
+              <h3 class="winnerName">{{topthree.first.name}}</h3>
+              <hr>
+              <h3>{{topthree.first.numcommits}} Commits</h3>
+              <hr>
+              <a href="https://github.com/{{topthree.first.name}}">View profile</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+              <div class="winnerContainer">
+                  <img class="imgPosition" src="./assets/img/secondPlace.png">
+                  <br>
+                  <img class="imgProfilePic" src="{{topthree.second.profilepicurl}}" alt="ProfilePic" >
+                  <h3 class="winnerName">{{topthree.second.name}}</h3>
+                  <hr>
+                  <h3>{{topthree.second.numcommits}} Commits</h3>
+                  <hr>
+                  <a href="https://github.com/{{topthree.second.name}}">View profile</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="winnerContainer">
+                    <img class="imgPosition" src="./assets/img/thirdPlace.png">
+                    <br>
+                    <img class="imgProfilePic" src="{{topthree.third.profilepicurl}}" alt="ProfilePic" > 
+                   
+                    <h3 class="winnerName">{{topthree.third.name}}</h3>
+                    <hr>
+                    <h3>{{topthree.third.numcommits}} Commits</h3>
+                    <hr>
+                    <a href="https://github.com/{{topthree.third.name}}">View profile</a>
+                </div>
+            </div>   
+        </div>
+  </div>
+  
+  
+  
+  
+  
