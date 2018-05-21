@@ -57,6 +57,7 @@ module.exports.getFullLeaderboard =  function ( organizationName , repoName , ca
 
         //saving the array of contributors to a varable
         let contributorsArray = githubJsonObject.data;
+
         //sorting the array of contributors based on the total commits
         contributorsArray.sort(function(contributorCurrent, contributorNext){
             return contributorNext.total-contributorCurrent.total
