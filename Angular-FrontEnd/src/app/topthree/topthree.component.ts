@@ -8,45 +8,36 @@ import { Response } from '@angular/http';
   styleUrls: ['./topthree.component.css']
 })
 export class TopthreeComponent implements OnInit {
+  //the name of the github organization and repo is diffined here
+   ORGANIZATION_NAME:String="Mozilla-Campus-Club-IIT";
+   REPO_NAME:String="Hello-World-Collection";
+
+   //stores the leaderboard object returned from the post request
+   leaderboardObject:any;
+
+   //to check if the leaderboardObject is loaded or not
+   isAvailable:boolean =false;
 
   //this is the constructor of the TopthreeComponent class
   constructor(private serverService: ServerService) { 
-    //This method  call will call the serverService.getTopThree() and get the top three when page loads
-    this.onGetTopThree();
+
   }
 
-//repoName holds the name of the contributed repo
-repoName="-"
-
-//================This JS Object will save top contributors data =====================
-topthree = 
-{
-  first: {
-      name:"-",
-      numcommits:0,
-      profilepicurl:"-"
-  },
-  second: {
-      name:"-",
-      numcommits:0,
-      profilepicurl:"-"
-  },
-  third: {
-      name:"-",
-      numcommits:0,
-      profilepicurl:"-"
-  }
-}
-//=============================================
 //===========================  HANDLING REQUESTS ======================================
-//This method will call the serverService.getTopThree() and get the top three
-onGetTopThree(){
-  this.serverService.getTopThree().subscribe(
-    (data :any)=>{
-      //Setting the values to the top three contributors JSON object data to data recived from get request with the below method
-      this.updateUiForTopThree(data)
-      console.log("Data Recieved");
-      console.log(data);
+
+getTheFullLeaderboard(organizationName,repoName){
+  //creating repo data JSON object to pass to the post request
+  const repoData={
+      "organizationName":organizationName,
+      "repoName":repoName
+  }
+  this.serverService.getLeaderBoard(repoData).subscribe(
+    (data)=>{
+      this.leaderboardObject=data;
+      console.log(data.message);
+      //setting leader board is available to the status (true) 
+      this.isAvailable=true;
+
     },
     (error)=>console.log(error)
   );
@@ -54,24 +45,15 @@ onGetTopThree(){
 
 //This method will set the values to the top three contributors JSON object data to data recived from get request
 updateUiForTopThree(data :any){
-  //reporname
-  this.repoName=data.repoName;
-  //1ST PLACE PERSON
-  this.topthree.first.name = data.topthree.first.name;
-  this.topthree.first.numcommits=data.topthree.first.numcommits;
-  this.topthree.first.profilepicurl=data.topthree.first.profilepicurl;
-  //2ND PLACE PERSON
-  this.topthree.second.name=data.topthree.second.name;
-  this.topthree.second.numcommits=data.topthree.second.numcommits;
-  this.topthree.second.profilepicurl=data.topthree.second.profilepicurl;
-  //3RD PLACE PERSON
-  this.topthree.third.name =data.topthree.third.name;
-  this.topthree.third.numcommits=data.topthree.third.numcommits;
-  this.topthree.third.profilepicurl=data.topthree.third.profilepicurl;
+
+
 }
+
 //=======================================================================================
 
 ngOnInit() {
+    //getting the leaderboard object
+    this.getTheFullLeaderboard(this.ORGANIZATION_NAME,this.REPO_NAME);
 }
 
 }

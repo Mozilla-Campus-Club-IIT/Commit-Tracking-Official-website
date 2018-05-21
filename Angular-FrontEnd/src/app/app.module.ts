@@ -9,11 +9,13 @@ import { FooterComponent } from './footer/footer.component';
 import { TopthreeComponent } from './topthree/topthree.component';
 import { ServerService } from './server.service'
 import {HttpModule} from "@angular/http";
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomePageComponent,
     NavComponent,
     HeaderComponent,
     LeaderboardComponent,

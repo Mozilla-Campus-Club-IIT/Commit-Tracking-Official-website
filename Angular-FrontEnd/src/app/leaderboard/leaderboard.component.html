@@ -34,8 +34,8 @@
     </div>    
 </div>
 
-<!-- Looping through the persons in the leaderboard using ngFor -->
-<div *ngFor="let person of persons; let i = index">
+<!-- Looping through the contributors in the leaderboard using ngFor -->
+<div *ngFor="let contributor of contributors; let i = index">
     <!-- ==========  The leaderboard Single entry  ==========  -->
     <div class="container">
         <div class="row leaderBoardRow">
@@ -46,29 +46,24 @@
             </div>
             <div class="col-xs-4">
                     <div class="leaderBoardCol">
-                        <p>{{person.username}}</p>
+                        <p>{{contributor.username}}</p>
                     </div>      
             </div>
             <div class="col-xs-3">
                 <div class="leaderBoardCol">
-                    <p> {{person.numcommits}} </p>
+                    <p> {{contributor.numberOfCommits}} </p>
                 </div>      
             </div>
             <div class="col-xs-4">
                 <div class="leaderBoardCol">
-                    <img class="imgProfilePic" src="{{person.profilepicurl}}" alt="ProfilePic" >
-                    <a href="https://github.com/{{person.username}}">View profile</a>
+                    <img class="imgProfilePic" src="{{contributor.profilePicUrl}}" alt="ProfilePic" >
+                    <a href="https://github.com/{{contributor.username}}">View profile</a>
                 </div>      
             </div>
         </div>    
     </div>    
 </div>
  
- <!-- ============== TESTING ==============
- <br> <br>  
- <button class="btn btn-success" (click) = "onGetLeaderboard()"> GET TOP THREE </button>
- <br> <br> 
- ============== TESTING ============== -->
 
  
 

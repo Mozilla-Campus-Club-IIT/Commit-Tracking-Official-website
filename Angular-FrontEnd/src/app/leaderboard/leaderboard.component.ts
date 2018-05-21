@@ -8,33 +8,36 @@ import { Response } from '@angular/http';
   styleUrls: ['./leaderboard.component.css']
 })
 export class LeaderboardComponent implements OnInit {
-
+  //the name of the github organization and repo is diffined here
+  ORGANIZATION_NAME:String="Mozilla-Campus-Club-IIT";
+  REPO_NAME:String="Hello-World-Collection";
   //this instance variable stores the array of persons/contributors
-  persons :any=[];
+  contributors :any =[];
 
   constructor(private serverService:ServerService) {
-    //this will run when the leaderboard component loads
-    this.onGetLeaderboard();
+
   }
   
-  //This method will execute the get request to get the leader board from the node backend
-  onGetLeaderboard(){
-    this.serverService.getLeaderBoard().subscribe(
-      (data :any)=>{
-        this.updateUiForLeaderBoard(data)
-        console.log("Data Recieved");
-        console.log(data);
+
+  getTheFullLeaderboard(organizationName,repoName){
+    //creating repo data JSON object to pass to the post request
+    const repoData={
+        "organizationName":organizationName,
+        "repoName":repoName
+    }
+    this.serverService.getLeaderBoard(repoData).subscribe(
+      (data)=>{
+        this.contributors=data.leaderboard.allContributors;
+        console.log(this.contributors);
+        //setting leader board is available to the status (true) 
+       
       },
       (error)=>console.log(error)
     );
   }
- 
-  //This method will update the leaderboard UI
-  updateUiForLeaderBoard(data :any){
-    this.persons =data.leaderboard
-  }
-
+  
   ngOnInit() {
+    this.getTheFullLeaderboard(this.ORGANIZATION_NAME,this.REPO_NAME);
   }
 
 }
