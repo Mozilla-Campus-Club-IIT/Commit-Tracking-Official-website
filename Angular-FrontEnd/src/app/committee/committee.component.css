@@ -1,0 +1,35 @@
+.container-fluid{
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+}
+
+.thumbnail{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    text-align: center;
+    padding: 5px;
+}
+
+img{
+    border-radius: 100%;
+    width:60%;
+}
+
+.mainHeading{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: 300;
+}
+.header{
+    background-color: rgb(15, 15, 15);
+    color: white;
+}
+.positionTitle{
+    font-size: 20px;
+    font-weight: 300;
+}
+.nameTitle{
+    font-weight: 400;
+    font-size: 20px;
+}
