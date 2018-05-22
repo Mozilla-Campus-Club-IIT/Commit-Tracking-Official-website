@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule ,Routes} from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -10,7 +11,19 @@ import { TopthreeComponent } from './topthree/topthree.component';
 import { ServerService } from './server.service'
 import {HttpModule} from "@angular/http";
 import { HomePageComponent } from './home-page/home-page.component';
+import { LoginComponent} from './login/login.component'
+import { LeaderboardPageComponent } from './leaderboard-page/leaderboard-page.component';
+import { CommitteeComponent } from './committee/committee.component'
 
+
+//defining the routes of the app
+const applicationRoutes:Routes =[
+  {path : '' ,component : HomePageComponent },
+  {path : 'committee' ,component : CommitteeComponent },
+  {path : 'login' ,component : LoginComponent},
+  {path : 'leaderboard' ,component : LeaderboardPageComponent}
+  
+]
 
 @NgModule({
   declarations: [
@@ -20,11 +33,15 @@ import { HomePageComponent } from './home-page/home-page.component';
     HeaderComponent,
     LeaderboardComponent,
     FooterComponent,
-    TopthreeComponent
+    TopthreeComponent,
+    LeaderboardPageComponent,
+    LoginComponent,
+    CommitteeComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(applicationRoutes)
   ],
   providers: [ServerService],
   bootstrap: [AppComponent]
