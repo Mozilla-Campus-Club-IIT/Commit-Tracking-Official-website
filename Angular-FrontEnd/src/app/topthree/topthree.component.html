@@ -1,11 +1,22 @@
-<div class="row">
+
+
+<h1 class="mainHeading" *ngIf="!isAvailable"> 
+ Loading ...
+</h1>
+
+<div class="row" *ngIf="isAvailable">
     <div class="col-xs-12">
   
       <h1 class="mainHeading"> 
         Top 3 Contributors
       </h1>
-      <h3 class="repoHeading"  *ngIf="isAvailable"> <b>Organization : </b > {{leaderboardObject.leaderboard.organizationName}}</h3>
-      <h3 class="repoHeading"  *ngIf="isAvailable"> <b>Repo : </b > {{leaderboardObject.leaderboard.repoName}}</h3>
+      <h3 class="repoHeading"  *ngIf="isAvailable"> 
+        <b>Organization : </b > {{leaderboardObject.leaderboard.organizationName}} &nbsp;&nbsp; | &nbsp;&nbsp;
+        <b>Repo : </b > {{leaderboardObject.leaderboard.repoName}}
+      </h3>
+      <br>
+      <br>
+     
     </div>
   </div>
   <div class="container" *ngIf="isAvailable">

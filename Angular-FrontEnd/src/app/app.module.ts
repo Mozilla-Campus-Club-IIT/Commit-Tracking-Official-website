@@ -13,7 +13,8 @@ import {HttpModule} from "@angular/http";
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent} from './login/login.component'
 import { LeaderboardPageComponent } from './leaderboard-page/leaderboard-page.component';
-import { CommitteeComponent } from './committee/committee.component'
+import { CommitteeComponent } from './committee/committee.component';
+import { ContributePageComponent } from './contribute-page/contribute-page.component'
 
 
 //defining the routes of the app
@@ -21,7 +22,8 @@ const applicationRoutes:Routes =[
   {path : '' ,component : HomePageComponent },
   {path : 'committee' ,component : CommitteeComponent },
   {path : 'login' ,component : LoginComponent},
-  {path : 'leaderboard' ,component : LeaderboardPageComponent}
+  {path : 'leaderboard' ,component : LeaderboardPageComponent},
+  {path : 'contribute' ,component : ContributePageComponent}
   
 ]
 
@@ -36,7 +38,8 @@ const applicationRoutes:Routes =[
     TopthreeComponent,
     LeaderboardPageComponent,
     LoginComponent,
-    CommitteeComponent
+    CommitteeComponent,
+    ContributePageComponent
   ],
   imports: [
     BrowserModule,

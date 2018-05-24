@@ -1,0 +1,55 @@
+.container-fulid{
+    /* background-image: url("../../assets/img/bgImg.png");
+    background-repeat: no-repeat; */
+    background-size: 70%;
+    
+}
+
+
+.positionTitle{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.nameTitle{
+    font-weight: 300;
+    font-size: 23px;
+}
+
+.mainHeading{
+    padding-top: 1px;
+    padding-bottom: 10px;
+    /* text-align: center; */
+    font-weight: 300;
+}
+
+.aboutImg{
+    width: 14%;
+    margin: auto;
+    padding-top:50px; 
+}
+
+.tshirtImg{
+    width: 54%;
+    margin: auto;
+    padding-top:50px; 
+}
+.sectionOne{
+    text-align: center;    
+}
+
+.smallWidth{
+    width: 95%;
+    font-size: 17px;
+    font-weight: 340;
+    margin: auto;
+    text-align: justify;
+
+}
+
+.largeSocialIcons{
+    margin: 30px;
+    font-size: 30px;
+    letter-spacing: 20px;
+}
+
