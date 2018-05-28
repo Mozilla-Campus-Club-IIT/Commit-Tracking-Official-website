@@ -1,69 +1,74 @@
-<div class="row">
-    <div class="col-xs-12">
-        <h1 class="mainHeading"> 
-        Leaderboard
-        </h1>
+<div *ngIf="isAvailable"> 
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="mainHeading"> 
+            Leaderboard
+            </h1>
+        </div>
     </div>
-</div>
 
- <!-- ==========  The leaderboard header  ==========  -->
-<div class="container">
-    <div class="row leaderBoardRowHeader">
-        <div class="col-xs-1">
-            <div class="leaderBoardCol">
-                <p> # </p>
-            </div>      
-        </div>
-        <div class="col-xs-4">
-            <div class="leaderBoardCol">
-                <span class="glyphicon glyphicon-user"></span>
-                Username
-            </div>      
-        </div>
-        <div class="col-xs-3">
-            <div class="leaderBoardCol">
-                <p> # Number of Commits </p>
-            </div>      
-        </div>
-        <div class="col-xs-4">
-            <div class="leaderBoardCol">
-                <i class="fab fa-github"></i>
-                Profile
-            </div>      
-        </div>
-    </div>    
-</div>
-
-<!-- Looping through the contributors in the leaderboard using ngFor -->
-<div *ngFor="let contributor of contributors; let i = index">
-    <!-- ==========  The leaderboard Single entry  ==========  -->
+    <!-- ==========  The leaderboard header  ==========  -->
     <div class="container">
-        <div class="row leaderBoardRow">
+        <div class="row leaderBoardRowHeader">
             <div class="col-xs-1">
                 <div class="leaderBoardCol">
-                    <p> {{i+1}} </p>
+                    <p> # </p>
                 </div>      
             </div>
             <div class="col-xs-4">
-                    <div class="leaderBoardCol">
-                        <p>{{contributor.username}}</p>
-                    </div>      
+                <div class="leaderBoardCol">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Username
+                </div>      
             </div>
             <div class="col-xs-3">
                 <div class="leaderBoardCol">
-                    <p> {{contributor.numberOfCommits}} </p>
+                    <p> # Number of Commits </p>
                 </div>      
             </div>
             <div class="col-xs-4">
                 <div class="leaderBoardCol">
-                    <img class="imgProfilePic" src="{{contributor.profilePicUrl}}" alt="ProfilePic" >
-                    <a href="https://github.com/{{contributor.username}}">View profile</a>
+                    <i class="fab fa-github"></i>
+                    Profile
                 </div>      
             </div>
         </div>    
-    </div>    
+    </div>
+
+    <!-- Looping through the contributors in the leaderboard using ngFor -->
+    <div *ngFor="let contributor of contributors; let i = index">
+        <!-- ==========  The leaderboard Single entry  ==========  -->
+        <div class="container" *ngIf="i<10">
+            <div class="row leaderBoardRow">
+                <div class="col-xs-1">
+                    <div class="leaderBoardCol">
+                        <p> {{i+1}} </p>
+                    </div>      
+                </div>
+                <div class="col-xs-4">
+                        <div class="leaderBoardCol">
+                            <p>{{contributor.username}}</p>
+                        </div>      
+                </div>
+                <div class="col-xs-3">
+                    <div class="leaderBoardCol">
+                        <p> {{contributor.numberOfCommits}} </p>
+                    </div>      
+                </div>
+                <div class="col-xs-4">
+                    <div class="leaderBoardCol">
+                        <img class="imgProfilePic" src="{{contributor.profilePicUrl}}" alt="ProfilePic" >
+                        <a href="https://github.com/{{contributor.username}}">View profile</a>
+                    </div>      
+                </div>
+            </div>    
+        </div>    
+    </div>
+
+    <br>
+    <br>
 </div>
- 
+    
 
  
 

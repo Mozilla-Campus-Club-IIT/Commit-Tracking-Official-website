@@ -13,6 +13,8 @@ export class LeaderboardComponent implements OnInit {
   REPO_NAME:String="Hello-World-Collection";
   //this instance variable stores the array of persons/contributors
   contributors :any =[];
+  //to check if the leaderboardObject is loaded or not
+  isAvailable:boolean =false;
 
   constructor(private serverService:ServerService) {
 
@@ -30,7 +32,7 @@ export class LeaderboardComponent implements OnInit {
         this.contributors=data.leaderboard.allContributors;
         console.log(this.contributors);
         //setting leader board is available to the status (true) 
-       
+        this.isAvailable=true;
       },
       (error)=>console.log(error)
     );

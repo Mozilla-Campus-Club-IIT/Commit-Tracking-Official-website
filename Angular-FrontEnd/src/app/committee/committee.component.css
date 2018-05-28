@@ -20,6 +20,7 @@ img{
     padding-bottom: 50px;
     text-align: center;
     font-weight: 300;
+    
 }
 .header{
     background-color: rgb(15, 15, 15);
@@ -32,4 +33,11 @@ img{
 .nameTitle{
     font-weight: 400;
     font-size: 20px;
+}
+#typed{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
 }

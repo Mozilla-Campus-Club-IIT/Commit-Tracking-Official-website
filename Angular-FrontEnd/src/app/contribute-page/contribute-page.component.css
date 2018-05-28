@@ -1,0 +1,39 @@
+.container-fluid{
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+}
+
+.mainHeading{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 300;
+}
+.header{
+    background-color: rgb(15, 15, 15);
+    color: white;
+}
+
+.pageBody{
+    min-height:1000px;
+}
+
+.imgScreenshot{
+    width: 60%;
+    margin: auto;
+}
+
+.imgScreenshotSmaller{
+    width: 54%;
+    margin: auto;
+}
+
+.smallWidth{
+    padding-bottom: 20px; 
+    width: 95%;
+    font-size: 20px;
+    font-weight: 340;
+    margin: auto;
+    text-align: center;
+}
+
