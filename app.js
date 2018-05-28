@@ -22,6 +22,7 @@ app.use(bodyparser.json());
 
 // ========================= MONGO DB ==================================
 
+/*
 const config= require('./config/database');
 //loading mongoose1 module
 const mongoose = require('mongoose');
@@ -34,6 +35,7 @@ if(connection){
 }else{
     console.log("Db Connection Failed!");
 }
+*/
 
 // ========================= PATH ==================================
 
