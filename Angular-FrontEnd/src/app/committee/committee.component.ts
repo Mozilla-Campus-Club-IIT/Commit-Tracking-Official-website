@@ -22,3 +22,5 @@ export class CommitteeComponent implements OnInit {
 
   }
 }
+
+//test
