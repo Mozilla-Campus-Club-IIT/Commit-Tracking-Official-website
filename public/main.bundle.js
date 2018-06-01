@@ -226,6 +226,7 @@ CommitteeComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], CommitteeComponent);
 
+//test
 //# sourceMappingURL=committee.component.js.map
 
 /***/ }),
@@ -773,7 +774,9 @@ var ServerService = (function () {
     ServerService.prototype.getLeaderBoard = function (repoData) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
         headers.append('content-Type', 'application/json');
-        return this.http.post("http://localhost:3000/leaderboard", repoData, { headers: headers }).map(function (res) { return res.json(); });
+        //https://mozilla-comit-tracker.herokuapp.com
+        //http://localhost:3000
+        return this.http.post("https://mozilla-comit-tracker.herokuapp.com/leaderboard", repoData, { headers: headers }).map(function (res) { return res.json(); });
     };
     return ServerService;
 }());
