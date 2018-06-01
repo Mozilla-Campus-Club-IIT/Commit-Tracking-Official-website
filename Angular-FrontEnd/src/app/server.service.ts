@@ -11,7 +11,9 @@ export class ServerService{
         let headers= new Headers();
         headers.append('content-Type' ,'application/json');
 
-        return this.http.post("http://localhost:3000/leaderboard", repoData ,{ headers : headers}).map(res=>res.json());
+        //https://mozilla-comit-tracker.herokuapp.com
+        //http://localhost:3000
+        return this.http.post("https://mozilla-comit-tracker.herokuapp.com/leaderboard", repoData ,{ headers : headers}).map(res=>res.json());
     }
 }
 
