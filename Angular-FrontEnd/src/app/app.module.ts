@@ -14,7 +14,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent} from './login/login.component'
 import { LeaderboardPageComponent } from './leaderboard-page/leaderboard-page.component';
 import { CommitteeComponent } from './committee/committee.component';
-import { ContributePageComponent } from './contribute-page/contribute-page.component'
+import { ContributePageComponent } from './contribute-page/contribute-page.component';
+import { ContactComponent } from './contact/contact.component'
 
 
 //defining the routes of the app
@@ -23,7 +24,8 @@ const applicationRoutes:Routes =[
   {path : 'committee' ,component : CommitteeComponent },
   {path : 'login' ,component : LoginComponent},
   {path : 'leaderboard' ,component : LeaderboardPageComponent},
-  {path : 'contribute' ,component : ContributePageComponent}
+  {path : 'contribute' ,component : ContributePageComponent},
+  {path : 'contact' ,component : ContactComponent}
   
 ]
 
@@ -39,7 +41,8 @@ const applicationRoutes:Routes =[
     LeaderboardPageComponent,
     LoginComponent,
     CommitteeComponent,
-    ContributePageComponent
+    ContributePageComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
