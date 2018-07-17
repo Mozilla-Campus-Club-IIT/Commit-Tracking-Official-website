@@ -16,8 +16,6 @@ img{
 }
 
 .mainHeading{
-    padding-top: 50px;
-    padding-bottom: 50px;
     text-align: center;
     font-weight: 300;
     
@@ -40,4 +38,8 @@ img{
     text-align: center;
     font-weight: 300;
     font-size: 30px;
+}
+.middle{
+    width: 100%;
+    
 }
