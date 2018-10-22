@@ -1,3 +1,1 @@
 # MCCIIT WEBSITE + COMMIT TRACKING BACKEND
-
-Need to be refactored!
